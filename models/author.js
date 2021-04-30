@@ -5,6 +5,10 @@ const AuthorSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  apellido: {
+    type: String,
+    required: true,
+  },
   publicados: {
     type: Number,
     required: true,
@@ -24,3 +28,6 @@ AuthorSchema.set("toJSON", {
 
 const Author = mongoose.model("Author", AuthorSchema);
 module.exports = Author;
+
+
+// nombre: Jorge Luis, apellido: Borges, publicados: 20, pais: Argentina
